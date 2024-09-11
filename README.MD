@@ -18,7 +18,7 @@ competition
 
 Chekout `README_dojo.md` on installation instructions
 
-### Github cloned pakages
+### Cloned and cutomized github packages
 
 - **Articubot One**
   - Repository: [joshnewans/articubot_one](https://github.com/joshnewans/articubot_one.git)
@@ -32,5 +32,5 @@ Chekout `README_dojo.md` on installation instructions
 
 
 ### Additional Instructions
-.....
+ For rplidar the package used is [Slamtec/sllidar_ros2](https://github.com/Slamtec/sllidar_ros2.git) and not the one used in the [Articulated Robotics Tutorial](https://articulatedrobotics.xyz/tutorials) tutorial
 
