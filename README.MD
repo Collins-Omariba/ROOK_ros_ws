@@ -71,7 +71,7 @@ sudo chmod 777 /dev/ttyUSB0
 The command for RPLIDAR A1 is :
 
 ```bash
-ros2 launch sllidar_ros2 view_sllidar_a1_launch.py
+ros2 launch sllidar_ros2 sllidar_a1_launch.py
 ```
 
 ## ON PC IN SAME NETWORK RUNNING main BRANCH WORKSPACE
