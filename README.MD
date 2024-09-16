@@ -108,3 +108,13 @@ Running nav2
 ros2 run nav2_map_server map_server --ros-args -p yaml_filename:=my_map_save.yaml -p use_sim_time:=true
 ```
 
+ACML commands
+
+```
+ros2 launch nav2_bringup localization_launch.py map:=./may_map_save.yaml use_sim_time:=true
+```
+
+```
+ros2 launch nav2_bringup localization_launch.py map:=./may_map_save.yaml use_sim_time:=true map_subscribe_transient_local:=true
+```
+Checkout `README_dojo.md` for more
