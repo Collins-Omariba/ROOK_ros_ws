@@ -1,37 +1,37 @@
 <?xml version="1.0"?>
-<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
-<package format="3">
+<package format="2">
   <name>diffdrive_arduino</name>
-  <version>0.0.0</version>
-  <description>Demo package of `ros2_control` hardware for DiffBot.</description>
+  <version>0.0.1</version>
+  <description>Provides an interface between diff_drive_controller and an Arduino.</description>
 
-  <maintainer email="denis.stogl@stoglrobotics.de">Dr.-Ing. Denis Štogl</maintainer>
-  <maintainer email="bence.magyar.robotics@gmail.com">Bence Magyar</maintainer>
-  <maintainer email="christoph.froehlich@ait.ac.at">Christoph Froehlich</maintainer>
+  <maintainer email="josh.newans@gmail.com">Josh Newans</maintainer>
+  <author email="josh.newans@gmail.com">Josh Newans</author>
+  <license>BSD</license>
 
-  <author email="denis.stogl@stoglrobotics.de">Dr.-Ing. Denis Štogl</author>
 
-  <license>Apache-2.0</license>
+  <!-- <url type="website">http://wiki.ros.org/diffdrive_arduino</url> -->
+  <url type="bugtracker">https://github.com/joshnewans/diffdrive_arduino/issues</url>
+  <url type="repository">https://github.com/joshnewans/diffdrive_arduino</url>
+
+
 
   <buildtool_depend>ament_cmake</buildtool_depend>
 
   <depend>hardware_interface</depend>
+  <depend>controller_manager</depend>
   <depend>pluginlib</depend>
   <depend>rclcpp</depend>
+  <depend>serial</depend>
   <depend>rclcpp_lifecycle</depend>
-  <depend>libserial-dev</depend>
+  <!-- <depend>rclcpp_lifecyle</depend> -->
 
-  <exec_depend>ros2_controllers_test_nodes</exec_depend>
-  <exec_depend>joint_state_broadcaster</exec_depend>
-  <exec_depend>diff_drive_controller</exec_depend>
-  <exec_depend>ros2controlcli</exec_depend>
-  <exec_depend>controller_manager</exec_depend>
-  <exec_depend>rviz2</exec_depend>
-  <exec_depend>robot_state_publisher</exec_depend>
 
-  <test_depend>ament_cmake_gtest</test_depend>
+<test_depend>ament_add_gmock</test_depend>
+<test_depend>hardware_interface</test_depend>
 
   <export>
     <build_type>ament_cmake</build_type>
   </export>
+
+  
 </package>
