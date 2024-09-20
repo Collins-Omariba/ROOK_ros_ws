@@ -75,6 +75,10 @@ ros2 launch sllidar_ros2 sllidar_a1_launch.py
 ```
 
 ## ON PC IN SAME NETWORK RUNNING main BRANCH WORKSPACE
+launch twist_mux
+```
+ros2 run twist_mux twist_mux --ros-args --params-file ./src/dojo/config/twist_mux.yaml -r cmd_vel_out:=diff_cont/cmd_vel_unstamped
+```
 
 launch rviz with the environment on the folder
 
@@ -88,10 +92,10 @@ launch teleop twist keyboard
 ros2 run teleop_twist_keyboard teleop_twist_keyboard --ros-args -r /cmd_vel:=/cmd_vel_key
 ```
 
-Teleop Twist with topic remap
+<!-- Teleop Twist with topic remap
 ```
 ros2 run teleop_twist_keyboard teleop_twist_keyboard --ros-args -r /cmd_vel:=/diff_cont/cmd_vel_unstamped
-```
+``` -->
 
 Launch SLAM for navigation
 ```
