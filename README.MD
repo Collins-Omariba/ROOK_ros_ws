@@ -56,13 +56,13 @@ Chekout `README_dojo.md` on installation instructions
 
 ### ON BOT(workspace in raspberry pi) RUNNING `pi` BRANCH WORKSPACE
 
-##### IF YOU JUST WANNA RUN THE SIMULATION INSTEAD OF ALL THE BOT COMMANDS RUN THE BELOW COMMAND IN THE PC WORKSPACE(`main` branch)
+###### IF YOU JUST WANNA RUN THE SIMULATION INSTEAD OF ALL THE BOT COMMANDS RUN THE BELOW COMMAND IN THE PC WORKSPACE(`main` branch), AND FOR THE PC COMMANDS AFTER THE BOT COMMANDS BELOW ENSURE `use_sim_time` is changed to `true`
 
 ```
 ros2 launch dojo launch_sim.launch.py world:=./src/dojo/worlds/dojo2024
 ```
 
-##### FOR ACTUAL ROBOT OPERATION RUN THESE(`pi` branch)
+###### FOR ACTUAL ROBOT OPERATION RUN THESE(`pi` branch)
 
 Command for robot launch file
 
@@ -108,26 +108,26 @@ ros2 run teleop_twist_keyboard teleop_twist_keyboard --ros-args -r /cmd_vel:=/di
 
 Launch SLAM for navigation
 ```
-ros2 launch slam_toolbox online_async_launch.py slam_params_file:=./src/dojo/config/mapper_params_online_async.yaml use_sim_time:=true
+ros2 launch slam_toolbox online_async_launch.py slam_params_file:=./src/dojo/config/mapper_params_online_async.yaml use_sim_time:=false
 ```
 
 Launch Nav2
 ```
-ros2 launch nav2_bringup navigation_launch.py use_sim_time:=true
+ros2 launch nav2_bringup navigation_launch.py use_sim_time:=false
 ```
 
 Running nav2
 ```
-ros2 run nav2_map_server map_server --ros-args -p yaml_filename:=my_map_save.yaml -p use_sim_time:=true
+ros2 run nav2_map_server map_server --ros-args -p yaml_filename:=my_map_save.yaml -p use_sim_time:=false
 ```
 
 ACML commands
 
 ```
-ros2 launch nav2_bringup localization_launch.py map:=./may_map_save.yaml use_sim_time:=true
+ros2 launch nav2_bringup localization_launch.py map:=./may_map_save.yaml use_sim_time:=false
 ```
 
 ```
-ros2 launch nav2_bringup localization_launch.py map:=./may_map_save.yaml use_sim_time:=true map_subscribe_transient_local:=true
+ros2 launch nav2_bringup localization_launch.py map:=./may_map_save.yaml use_sim_time:=false map_subscribe_transient_local:=true
 ```
 Checkout `README_dojo.md` for more
