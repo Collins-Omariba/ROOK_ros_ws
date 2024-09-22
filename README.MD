@@ -51,9 +51,18 @@ Chekout `README_dojo.md` on installation instructions
 
 
 
-## IMPORTANT COMMANDS WHEN ROBOT IS FULLY RUNNING / FOR ROBOT TO FULLY RUN
+## IMPORTANT COMMANDS TO FULLY RUN THE ROBOT OR GAZEBO SIMULATION (THE BOT(raspberry pi) and PC must be connected to the same network)
 > 📝 **Note**: FOR PROPER OPERATION IN THE PI CHECKOUT TO THE `pi` BRANCH
-### ON BOT IN SAME NETWORK RUNNING pi BRANCH WORKSPACE
+
+### ON BOT(workspace in raspberry pi) RUNNING `pi` BRANCH WORKSPACE
+
+##### IF YOU JUST WANNA RUN THE SIMULATION INSTEAD OF ALL THE BOT COMMANDS RUN THE BELOW COMMAND IN THE PC WORKSPACE(`main` branch)
+
+```
+ros2 launch dojo launch_sim.launch.py world:=./src/dojo/worlds/dojo2024
+```
+
+##### FOR ACTUAL ROBOT OPERATION RUN THESE(`pi` branch)
 
 Command for robot launch file
 
@@ -74,7 +83,7 @@ The command for RPLIDAR A1 is :
 ros2 launch sllidar_ros2 sllidar_a1_launch.py
 ```
 
-## ON PC IN SAME NETWORK RUNNING main BRANCH WORKSPACE
+## ON PC RUNNING `main` BRANCH WORKSPACE
 launch twist_mux
 ```
 ros2 run twist_mux twist_mux --ros-args --params-file ./src/dojo/config/twist_mux.yaml -r cmd_vel_out:=diff_cont/cmd_vel_unstamped
