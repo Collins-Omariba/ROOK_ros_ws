@@ -110,24 +110,45 @@ Launch SLAM for navigation
 ```
 ros2 launch slam_toolbox online_async_launch.py slam_params_file:=./src/dojo/config/mapper_params_online_async.yaml use_sim_time:=false
 ```
+----
+----
+----
 
-Launch Nav2
+###### YOU MAY AFTER THE ABOVE GO WITH 1 OR 2 BELOW  (replace my_map_save with the path to your saved map after mappping where necessary)
+
+-----
+----
+1. Launch Nav2
+
 ```
 ros2 launch nav2_bringup navigation_launch.py use_sim_time:=false
 ```
 
-Running nav2
-```
-ros2 run nav2_map_server map_server --ros-args -p yaml_filename:=my_map_save.yaml -p use_sim_time:=false
-```
+-----------------------------
+------------------------
 
-ACML commands
+2. ACML commands
 
+```
+ros2 launch dojo localization_launch.py map:=./may_map_save.yaml use_sim_time:=false
+```
+or
 ```
 ros2 launch nav2_bringup localization_launch.py map:=./may_map_save.yaml use_sim_time:=false
-```
+``` 
+
+------------------
+
 
 ```
-ros2 launch nav2_bringup localization_launch.py map:=./may_map_save.yaml use_sim_time:=false map_subscribe_transient_local:=true
+ros2 launch dojo navigation_launch.py use_sim_time:=false map_subscribe_transient_local:=true params_file:=./src/dojo/config/nav2_params.yaml
 ```
+
+or
+
+```
+ros2 launch nav2_bringup navigation_launch.py use_sim_time:=false map_subscribe_transient_local:=true params_file:=./src/dojo/config/nav2_params.yaml
+```
+
+---------
 Checkout `README_dojo.md` for more
