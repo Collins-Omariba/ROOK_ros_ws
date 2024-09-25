@@ -36,8 +36,8 @@ Welcome to **ROOK DROID and ECHO** teams workspace for the [Robotics Dojo 2024](
 
 - **DiffDrive Arduino** (Humble Branch)
   - Repository: [joshnewans/diffdrive_arduino](https://github.com/joshnewans/diffdrive_arduino.git)
-  - Utilizes an Arduino running [ros_arduino_bridge](https://github.com/joshnewans/ros_arduino_bridge.git).
-
+  - Utilizes an Arduino Uno running [ros_arduino_bridge](https://github.com/joshnewans/ros_arduino_bridge.git). You can checkout the `ros_arduino_bridge` branch for the code used in our implementation.
+  
 ### Reference Package
 
 - **Articubot One**
