@@ -1,6 +1,9 @@
 # R.O.O.K and ECHO
 
-Welcome to **ROOK DROID and ECHO** teams workspace for the [Robotics Dojo 2024](https://roboticsdojo.github.io/) competition. This workspace contains several key packages and resources to operate and simulate the robot.
+Welcome to **ROOK DROID and ECHO** teams workspace for the [Robotics Dojo 2024](https://roboticsdojo.github.io/) competition.
+You can checkout the Technical design Paper for this project [here](https://drive.google.com/file/d/1gMHdSiueBZalDLPn9yPsRakybKB0Rzj9/view?usp=sharing)
+
+This workspace contains several key packages and resources to operate and simulate the robot.
 
 - The **dojo** package is the main package.
 - The **articubot_one** package is used as a reference.
