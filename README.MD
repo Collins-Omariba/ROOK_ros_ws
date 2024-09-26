@@ -34,6 +34,7 @@ Welcome to **ROOK DROID and ECHO** teams workspace for the [Robotics Dojo 2024](
 - **SLLidar ROS2**
   - Repository: [Slamtec/sllidar_ros2](https://github.com/Slamtec/sllidar_ros2.git)
 
+
 - **DiffDrive Arduino** (Humble Branch)
   - Repository: [joshnewans/diffdrive_arduino](https://github.com/joshnewans/diffdrive_arduino.git)
   - Utilizes an Arduino Uno running [ros_arduino_bridge](https://github.com/joshnewans/ros_arduino_bridge.git). You can checkout the `ros_arduino_bridge` branch for the code used in our implementation.
@@ -101,12 +102,17 @@ For real-world robot operation, use the following commands:
     rviz2 -d ./src/dojo/rviz/default.rviz
     ```
 
-3. **Launch teleop for keyboard control:**
+3. **Launch teleop for keyboard control *OR* use joystick:**
+
 
     ```bash
     ros2 run teleop_twist_keyboard teleop_twist_keyboard --ros-args -r /cmd_vel:=/cmd_vel_key
     ```
 
+
+    ```bash
+    ros2 launch dojo joystick.launch.py
+    ```
 4. **Launch SLAM for simultaneous localization and mapping:**
 
     ```bash
