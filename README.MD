@@ -130,6 +130,15 @@ After completing the above steps, choose one of the following options based on y
 
 ### Option 1: Launch Nav2
 
+
+- **Using dojo's navigation launch:**
+
+```bash
+ros2 launch dojo navigation_launch.py use_sim_time:=false
+```
+
+- **Using nav2's navigation launch:**
+
 ```bash
 ros2 launch nav2_bringup navigation_launch.py use_sim_time:=false
 ```
@@ -150,7 +159,7 @@ ros2 launch nav2_bringup navigation_launch.py use_sim_time:=false
 
 ---
 
-- **Using dojo's navization launch:**
+- **Using dojo's navigation launch:**
 
     ```bash
     ros2 launch dojo navigation_launch.py use_sim_time:=false map_subscribe_transient_local:=true params_file:=./src/dojo/config/nav2_params.yaml
